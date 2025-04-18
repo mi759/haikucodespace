@@ -9,5 +9,23 @@
 			"version": "latest",
 			"golangciLintVersion": "latest"
 		}
+	},
+	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"mi759/haikuapi": {
+					"permissions": {
+						"contents": "write",
+						"pull_requests": "write"
+					}
+				},
+				"mi759/haikufrontend": {
+					"permissions": {
+						"contents": "write",
+						"pull_requests": "write"
+					}
+				}
+			}
+		}
 	}
 }
