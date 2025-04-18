@@ -1,0 +1,13 @@
+{
+	"name": "Go & Typescript",
+	"image": "ghcr.io/prulloac/base:bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/prulloac/devcontainer-features/bun:1": {},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "latest",
+			"golangciLintVersion": "latest"
+		}
+	}
+}
