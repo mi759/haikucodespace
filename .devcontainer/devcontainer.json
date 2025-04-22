@@ -10,7 +10,13 @@
 			"golangciLintVersion": "latest"
 		}
 	},
+	"postCreateCommand": ".devcontainer/postcreate.sh",
 	"customizations": {
+		"vscode": {
+			"extensions": [
+				"svelte.svelte-vscode"
+			]
+		},
 		"codespaces": {
 			"repositories": {
 				"mi759/haikuapi": {
