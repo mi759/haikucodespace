@@ -1,3 +1,4 @@
+#!/bin/sh
 # Avoid accidentally adding embedded repo
 git config set advice.addEmbeddedRepo false
 
