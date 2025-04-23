@@ -2,9 +2,9 @@
 git config set advice.addEmbeddedRepo false
 
 # Setup backend
-git clone https://github.com/mi759/haikuapi.git
+gh repo clone mi759/haikuapi
 
 # Setup frontend
-git clone https://github.com/mi759/haikufrontend.git
+gh repo clone mi759/haikufrontend
 cd haikufrontend
 npm install
