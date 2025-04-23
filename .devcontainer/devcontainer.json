@@ -10,7 +10,7 @@
 			"golangciLintVersion": "latest"
 		}
 	},
-	"postCreateCommand": ".devcontainer/postcreate.sh",
+	"postCreateCommand": ".devcontainer/postCreate.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
