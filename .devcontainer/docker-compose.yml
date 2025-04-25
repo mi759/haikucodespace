@@ -14,10 +14,6 @@ services:
       dockerfile: ./db/Dockerfile
     ports:
       - '${POSTGRES_PORT}:5432'
-    environment:
-      TZ: ${TZ}
-      PGDATA: ${PGDATA}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+    env_file:
+      - .env
+      - .env.local
