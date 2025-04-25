@@ -7,13 +7,16 @@ services:
       dockerfile: ./app/Dockerfile
     # prevent container from shutting down
     command: /bin/sh -c "while sleep 1000; do :; done"
+    env_file:
+      - .env
+      - .env.codespace
   db:
     container_name: postgres
     build:
       context: .
       dockerfile: ./db/Dockerfile
     ports:
-      - '${POSTGRES_PORT}:5432'
+      - '5432:5432'
     env_file:
       - .env
-      - .env.local
+      - .env.codespace
