@@ -1,0 +1,23 @@
+
+services:
+  app:
+    container_name: application
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    # prevent container from shutting down
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  db:
+    container_name: postgres
+    build:
+      context: .
+      dockerfile: ./db/Dockerfile
+    ports:
+      - '${POSTGRES_PORT}:5432'
+    environment:
+      TZ: ${TZ}
+      PGDATA: ${PGDATA}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}

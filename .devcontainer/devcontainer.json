@@ -1,20 +1,13 @@
 {
-	"name": "Go & Typescript",
-	"image": "ghcr.io/prulloac/base:bookworm",
-	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/prulloac/devcontainer-features/bun:1": {},
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers/features/go:1": {
-			"version": "latest",
-			"golangciLintVersion": "latest"
-		}
-	},
-	"postCreateCommand": "/bin/sh .devcontainer/post-create.sh",
+	"name": "Haiku Codespace",
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"svelte.svelte-vscode"
+				"svelte.svelte-vscode",
+				"golang.go"
 			]
 		},
 		"codespaces": {
