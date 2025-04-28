@@ -8,7 +8,6 @@ services:
     # prevent container from shutting down
     command: /bin/sh -c "while sleep 1000; do :; done"
     env_file:
-      - .env
       - .env.codespace
   db:
     container_name: postgres
@@ -18,5 +17,4 @@ services:
     ports:
       - '5432:5432'
     env_file:
-      - .env
       - .env.codespace
