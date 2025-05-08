@@ -3,5 +3,5 @@ set -e
 
 while read file
 do
-    psql --username ${POSTGRES_USER} --dbname ${DB_NAME} -f "/tmp/haikudatabase/${file}"
+    psql --username ${DB_USER} --dbname ${DB_NAME} -f "/tmp/haikudatabase/${file}"
 done < "/tmp/haikudatabase/apply_order.txt"
