@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-for f in /tmp/definition/*.sql;
+while read file
 do
-    psql --username $DB_USER --dbname $DB_NAME -f "${f}"
-done
+    psql --username ${POSTGRES_USER} --dbname ${DB_NAME} -f "/tmp/haikudatabase/${file}"
+done < "/tmp/haikudatabase/apply_order.txt"
